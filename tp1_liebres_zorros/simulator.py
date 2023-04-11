@@ -39,6 +39,7 @@ class Simulator:
             tiempo_arr.append(tiempo)
 
         return np.array(presas_arr), np.array(predadores_arr), np.array(tiempo_arr)
+    # Funcion para graficar la densidad y el diagrama de fases del modelo
 
     def plot_graphs(self,liebres_array, zorros_array, tiempo_array):
         plt.plot(tiempo_array,
