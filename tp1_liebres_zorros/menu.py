@@ -18,13 +18,14 @@ class Menu:
         elif option == "2":
             # Pedir los valores por consola
             print("\nIngresa los siguientes valores para la simulación:")
+            zorros_iniciales = int(input("Cantidad de zorros iniciales: "))
+            tiempo_simulacion = int(input("Tiempo de simulación (en semanas): "))
             tasa_natalidad_lieb = float(input("Tasa de natalidad de las liebres: "))
             tasa_mortandad_lieb = float(input("Tasa de mortandad de las liebres: "))
             tasa_mortandad_zorr = float(input("Tasa de mortandad de los zorros: "))
             tasa_natalidad_zorr = float(input("Tasa de natalidad de los zorros: "))
             liebres_iniciales = int(input("Cantidad de liebres iniciales: "))
-            zorros_iniciales = int(input("Cantidad de zorros iniciales: "))
-            tiempo_simulacion = int(input("Tiempo de simulación (en semanas): "))
+
             variacion_tiempo = float(input("Variación de tiempo (en semanas): "))
             dp = Simulator(liebres_iniciales, zorros_iniciales, tiempo_simulacion, tasa_natalidad_lieb,
                            tasa_mortandad_lieb, tasa_mortandad_zorr, tasa_natalidad_zorr, variacion_tiempo,
