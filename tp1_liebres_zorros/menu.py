@@ -1,4 +1,5 @@
-from simulator import Simulator
+# from simulator import Simulator
+from simulatorLogistic import Simulator
 
 
 class Menu:
@@ -25,11 +26,12 @@ class Menu:
             tasa_mortandad_lieb = float(input("Tasa de mortandad de las liebres: "))
             tasa_mortandad_zorr = float(input("Tasa de mortandad de los zorros: "))
             tasa_natalidad_zorr = float(input("Tasa de natalidad de los zorros: "))
-
             variacion_tiempo = float(input("Variación de tiempo (en semanas): "))
+            capacidad_carga = int(input("Capacidad de carga del entorno: "))
+
             dp = Simulator(liebres_iniciales, zorros_iniciales, tiempo_simulacion, tasa_natalidad_lieb,
                            tasa_mortandad_lieb, tasa_mortandad_zorr, tasa_natalidad_zorr, variacion_tiempo,
-                           tiempo_inicial=1)
+                           tiempo_inicial=1, K=capacidad_carga)
             # Correr la simulación con los valores ingresados
             liebres_array, zorros_array, tiempo_array = dp.simulation()
             dp.plot_graphs(liebres_array, zorros_array, tiempo_array)
